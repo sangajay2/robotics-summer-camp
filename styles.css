@@ -1,0 +1,449 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+:root {
+    --primary-color: #003366;
+    --secondary-color: #f8f9fa;
+    --accent-color: #ff6b00;
+    --text-color: #333;
+    --lego-bg: #fff4e6;
+    --robot-bg: #e6f3ff;
+    --printer-bg: #e6ffe6;
+    --ai-bg: #f5e6ff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.header {
+    background-color: white;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+    padding: 0.5rem; /* Reduced padding */
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    background-color: rgba(255, 255, 255, 0.95);
+    text-align: center;
+    height: auto;
+    min-height: 100px; /* Reduced header height */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.main-title {
+    color: var(--primary-color);
+    font-size: 1.8rem; /* Slightly smaller font size */
+    margin: 0.1rem 0; /* Further reduced margin */
+    font-weight: 600;
+    padding-bottom: 0.25rem; /* Reduced padding */
+    line-height: 1.1; /* Tighter line height */
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 0; /* Removed margin between logo and title */
+}
+
+.logo img {
+    height: 50px;
+    transition: transform 0.3s ease;
+}
+
+.logo img:hover {
+    transform: scale(1.05);
+}
+
+.main-content {
+    margin-top: 100px;
+    padding: 2rem;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.project-card {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+}
+
+.project-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.project-card .content {
+    padding: 1.5rem;
+}
+
+.project-card h3 {
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+.back-button {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    background-color: var(--accent-color);
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    margin-top: 2rem;
+    transition: background-color 0.3s ease;
+}
+
+.back-button:hover {
+    background-color: #e65c00;
+}
+
+.project-page {
+    max-width: 800px;
+    margin: 100px auto;
+    padding: 2rem;
+}
+
+.project-banner {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+}
+
+.page-title {
+    color: var(--primary-color);
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem; /* Reduced margin */
+    color: var(--primary-color);
+    text-align: center;
+    position: relative;
+    margin-top: -2rem; /* Pull the title up slightly */
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 3px;
+    background-color: var(--accent-color);
+}
+
+.subsection-title {
+    color: var(--primary-color);
+    margin: 1.5rem 0 1rem;
+}
+
+.feature-list {
+    margin-left: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+/* Lego Section */
+#lego {
+    background-color: var(--lego-bg);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 85vh;
+    padding-top: 8rem; /* Additional top padding for Lego section */
+}
+
+.lego-animation {
+    width: 400px;
+    height: 300px;
+    position: relative;
+    margin: 1.5rem 0; /* Reduced margin */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.lego-gif {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* Line Follower Section */
+#line-follower {
+    background-color: var(--robot-bg);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 85vh;
+}
+
+.path-container {
+    width: 300px;
+    height: 300px;
+    position: relative;
+    border: 3px solid #333;
+    margin: 2rem 0;
+    background-color: #fff;
+    border-radius: 10px;
+}
+
+.robot {
+    width: 40px;
+    height: 25px;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 60"><path d="M95,25H80V15c0-2.8-2.2-5-5-5H25c-2.8,0-5,2.2-5,5v10H5c-2.8,0-5,2.2-5,5v10c0,2.8,2.2,5,5,5h15v10c0,2.8,2.2,5,5,5h50c2.8,0,5-2.2,5-5V45h15c2.8,0,5-2.2,5-5V30C100,27.2,97.8,25,95,25z" fill="%23ff6b00"/><circle cx="25" cy="45" r="8" fill="%23333"/><circle cx="75" cy="45" r="8" fill="%23333"/></svg>') center/contain no-repeat;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: all 0.5s linear;
+    transform-origin: center;
+}
+
+.path-line {
+    position: absolute;
+    background-color: #333;
+}
+
+.path-line.top {
+    top: 12px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+}
+
+.path-line.right {
+    top: 12px;
+    right: 12px;
+    width: 3px;
+    height: calc(100% - 24px);
+}
+
+.path-line.bottom {
+    bottom: 12px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+}
+
+.path-line.left {
+    top: 12px;
+    left: 12px;
+    width: 3px;
+    height: calc(100% - 24px);
+}
+
+/* 3D Printer & AI Sections */
+#printer {
+    background-color: var(--printer-bg);
+    min-height: 85vh;
+}
+
+#ai {
+    background-color: var(--ai-bg);
+    min-height: 85vh;
+}
+
+.video-container {
+    width: 100%;
+    max-width: 800px;
+    margin: 1.5rem 0; /* Reduced margin */
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.video-container iframe {
+    width: 100%;
+    aspect-ratio: 16/9;
+    border: none;
+}
+
+.description {
+    max-width: 600px;
+    text-align: center;
+    margin: 1.5rem auto; /* Reduced margin */
+    line-height: 1.8;
+}
+
+footer {
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: 1.5rem;
+}
+
+/* Animations */
+@keyframes transform {
+    0% { transform: scale(1) rotate(0deg); }
+    50% { transform: scale(1.2) rotate(180deg); }
+    100% { transform: scale(1) rotate(360deg); }
+}
+
+.lego-car {
+    width: 100%;
+    height: 100%;
+    background: url('https://via.placeholder.com/300x300?text=Lego+Car') center/contain no-repeat;
+    animation: transform 3s infinite;
+}
+
+/* Center all sections */
+section {
+    min-height: 85vh; /* Reduced from 100vh to decrease scrolling length */
+    padding: 6rem 2rem 3rem; /* Reduced top and bottom padding */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative; /* Added for better positioning */
+}
+
+/* Remove duplicate media queries and combine them */
+@media (max-width: 768px) {
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .main-content {
+        padding: 1rem;
+    }
+    
+    .project-page {
+        padding: 1rem;
+    }
+
+    section {
+        min-height: 85vh;
+        padding: 7rem 1rem 2rem;
+        gap: 1rem;
+    }
+    
+    .section-title {
+        font-size: 1.6rem;
+        margin-bottom: 1rem;
+    }
+    
+    .lego-animation {
+        width: 90%;
+        max-width: 300px;
+        height: 250px;
+    }
+    
+    .path-container {
+        width: 90%;
+        max-width: 280px;
+        height: 280px;
+    }
+    
+    .description {
+        padding: 0 1rem;
+        font-size: 0.95rem;
+        width: 90%;
+    }
+
+    .video-container {
+        width: 90%;
+        margin: 1rem auto;
+    }
+
+    .robot {
+        width: 35px;
+        height: 22px;
+    }
+
+    .start-btn {
+        padding: 0.7rem 1.8rem;
+        font-size: 1rem;
+    }
+
+    .header {
+        min-height: 110px;
+        padding: 0.5rem;
+    }
+
+    .logo img {
+        height: 40px;
+    }
+
+    .main-title {
+        font-size: 1.4rem;
+        padding: 0 0.5rem;
+        margin: 0.2rem 0;
+    }
+
+    footer {
+        padding: 1rem;
+        font-size: 0.9rem;
+    }
+
+    #lego {
+        padding-top: 8.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .section-title {
+        font-size: 1.4rem;
+    }
+
+    .lego-animation,
+    .path-container {
+        width: 95%;
+        height: 220px;
+    }
+
+    .description {
+        font-size: 0.9rem;
+        width: 95%;
+    }
+
+    .main-title {
+        font-size: 1.3rem;
+    }
+
+    #lego {
+        padding-top: 8rem;
+    }
+
+    .video-container {
+        width: 95%;
+    }
+}
