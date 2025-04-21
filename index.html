@@ -2,7 +2,10 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="theme-color" content="#003366">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <title>Robotics Summer Camp - Meridian School</title>
     <link rel="stylesheet" href="styles.css">
 </head>
@@ -16,62 +19,83 @@
         <h1 class="main-title">Robotics Summer Camp</h1>
     </header>
 
-    <section id="lego">
-        <h2 class="section-title">🧱 Lego Car Assembly</h2>
-        <div class="lego-animation">
-            <img src="https://c.tenor.com/xjA4F9LH3TIAAAAd/tenor.gif" alt="Lego Assembly Animation" class="lego-gif">
+    <div class="announcement-banner">
+        <div class="announcement-content">
+            <div class="camp-dates">
+                <span class="icon">📅</span>
+                <h3>Summer Camp Duration</h3>
+                <p>24th April - 23rd May, 2025</p>
+            </div>
+            <div class="contact-info">
+                <span class="icon">👤</span>
+                <h3>Contact Person</h3>
+                <p>Mr. Jay</p>
+                <a href="tel:+919404703138" class="phone-link">
+                    <span class="icon">📞</span>
+                    +91 9404703138
+                </a>
+            </div>
         </div>
-        <p class="description">
-            Watch Lego blocks assemble into a car, showcasing creativity and design. 
-            In our summer camp, you'll learn to build and program your own Lego robots!
-        </p>
-    </section>
+    </div>
 
-    <section id="line-follower">
-        <h2 class="section-title">🚗 Line Follower Robot</h2>
-        <div class="path-container">
-            <div class="path-line top"></div>
-            <div class="path-line right"></div>
-            <div class="path-line bottom"></div>
-            <div class="path-line left"></div>
-            <div class="robot" id="robot"></div>
-        </div>
-        <button class="start-btn" id="startButton">Start Robot</button>
-        <p class="description">
-            Click start to see a robot car follow a black line path automatically. 
-            Learn to build and program your own line following robots at our summer camp!
-        </p>
-    </section>
+    <main>
+        <section id="lego">
+            <h2 class="section-title">🧱 Lego Car Assembly</h2>
+            <div class="lego-animation">
+                <img src="https://c.tenor.com/xjA4F9LH3TIAAAAd/tenor.gif" alt="Lego Assembly Animation" class="lego-gif">
+            </div>
+            <p class="description">
+                Watch Lego blocks assemble into a car, showcasing creativity and design. 
+                In our summer camp, you'll learn to build and program your own Lego robots!
+            </p>
+        </section>
 
-    <section id="printer">
-        <h2 class="section-title">🖨️ 3D Printer</h2>
-        <div class="video-container">
-            <iframe src="https://www.youtube.com/embed/gP07amLXYAM" 
-                    title="3D Printing Video" 
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                    allowfullscreen>
-            </iframe>
-        </div>
-        <p class="description">
-            See how our school's 3D printer brings student designs to life. 
-            During the summer camp, you'll learn 3D modeling and print your own creations!
-        </p>
-    </section>
+        <section id="line-follower">
+            <h2 class="section-title">🚗 Line Follower Robot</h2>
+            <div class="path-container">
+                <div class="path-line top"></div>
+                <div class="path-line right"></div>
+                <div class="path-line bottom"></div>
+                <div class="path-line left"></div>
+                <div class="robot" id="robot"></div>
+            </div>
+            <button class="start-btn" id="startButton">Start Robot</button>
+            <p class="description">
+                Click start to see a robot car follow a black line path automatically. 
+                Learn to build and program your own line following robots at our summer camp!
+            </p>
+        </section>
 
-    <section id="ai">
-        <h2 class="section-title">🧠 Artificial Intelligence (AI)</h2>
-        <div class="video-container">
-            <iframe src="https://www.youtube.com/embed/GPUpBEEzifo" 
-                    title="AI Video" 
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                    allowfullscreen>
-            </iframe>
-        </div>
-        <p class="description">
-            Discover how AI helps machines think and learn through student-made models. 
-            Join us to explore the fascinating world of artificial intelligence this summer!
-        </p>
-    </section>
+        <section id="printer">
+            <h2 class="section-title">🖨️ 3D Printer</h2>
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/gP07amLXYAM" 
+                        title="3D Printing Video" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                        allowfullscreen>
+                </iframe>
+            </div>
+            <p class="description">
+                See how our school's 3D printer brings student designs to life. 
+                During the summer camp, you'll learn 3D modeling and print your own creations!
+            </p>
+        </section>
+
+        <section id="ai">
+            <h2 class="section-title">🧠 Artificial Intelligence (AI)</h2>
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/GPUpBEEzifo" 
+                        title="AI Video" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                        allowfullscreen>
+                </iframe>
+            </div>
+            <p class="description">
+                Discover how AI helps machines think and learn through student-made models. 
+                Join us to explore the fascinating world of artificial intelligence this summer!
+            </p>
+        </section>
+    </main>
 
     <footer>
         © Meridian School Banjara Hills | Robotics Summer Camp
