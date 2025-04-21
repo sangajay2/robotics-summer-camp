@@ -435,7 +435,15 @@ section {
     margin: 0;
 }
 
-/* Remove duplicate media queries and combine them */
+.icon-img {
+    width: 40px;
+    height: 40px;
+    display: block;
+    margin: 0 auto 0.15rem;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
 @media (max-width: 768px) {
     .projects-grid {
         grid-template-columns: 1fr;
@@ -570,6 +578,11 @@ section {
         transform: scale(0.98);
         opacity: 0.9;
     }
+
+    .icon-img {
+        width: 35px;
+        height: 35px;
+    }
 }
 
 @media (max-width: 480px) {
@@ -619,6 +632,11 @@ section {
     .announcement-content p {
         font-size: 0.75rem;
         line-height: 1.2;
+    }
+
+    .icon-img {
+        width: 30px;
+        height: 30px;
     }
 }
 
